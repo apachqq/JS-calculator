@@ -21,15 +21,28 @@ document.querySelector('.ac').onclick = clearAll;
 
 document.querySelector('.buttons').onclick = (event) => {
     // press note button
-    if(!event.target.classList.contains('btn')) return;
+    if (!event.target.classList.contains('btn')) return;
+
     // press button clearAll ac
-    if(event.target.classList.contains('ac')) return;
+    if (event.target.classList.contains('ac')) return;
+
     out.textContent = '';
+
     // get pressed button
     const key = event.target.textContent;
+
     // if pressed 0-9 or .
-    if(digit.includes(key)) {
+
+    if (digit.includes(key)) {
         a += key;
+        console.log(a, b, sign)
         out.textContent = a;
+    }
+    // if pressed button + - / *
+    if (action.includes(key)) {
+        sign = key;
+        out.textContent = sign;
+        console.log(a, b, sign)
+        return;
     }
 }
