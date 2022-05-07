@@ -17,4 +17,12 @@ function clearAll() {
     out.textContent = 0;
 }
 
-document.querySelector('.ac').onclick = clearAll()
+document.querySelector('.ac').onclick = clearAll;
+
+document.querySelector('.buttons').onclick = (event) => {
+    // press note button
+    if(!event.target.classList.contains('btn')) return;
+    // press button clearAll ac
+    if(event.target.classList.contains('ac')) return;
+    out.textContent = '';
+}
