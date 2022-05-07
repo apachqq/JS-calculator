@@ -34,9 +34,17 @@ document.querySelector('.buttons').onclick = (event) => {
     // if pressed 0-9 or .
 
     if (digit.includes(key)) {
-        a += key;
-        console.log(a, b, sign)
-        out.textContent = a;
+        if (b === '' && sign === '') {
+            a += key;
+            out.textContent = a;
+        } else if (a !== '' && b !== '' && finish) {
+
+        } else {
+            b += key;
+            out.textContent = a;
+        }
+        console.log(a, b, sign);
+        return;
     }
     // if pressed button + - / *
     if (action.includes(key)) {
