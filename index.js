@@ -53,4 +53,25 @@ document.querySelector('.buttons').onclick = (event) => {
         console.log(a, b, sign)
         return;
     }
+
+    // pressed =
+    if (key === '=') {
+        switch (sign) {
+            case '+':
+                a = (+a) + (+b);
+                break;
+            case '-':
+                a = a - b;
+                break;
+            case 'X':
+                a = a * b;
+                break;
+            case '/':
+                a = a / b;
+                break;
+        }
+        finish = true;
+        out.textContent = a;
+        console.log(a, b, sign)
+    }
 }
