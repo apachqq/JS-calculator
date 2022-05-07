@@ -25,4 +25,11 @@ document.querySelector('.buttons').onclick = (event) => {
     // press button clearAll ac
     if(event.target.classList.contains('ac')) return;
     out.textContent = '';
+    // get pressed button
+    const key = event.target.textContent;
+    // if pressed 0-9 or .
+    if(digit.includes(key)) {
+        a += key;
+        out.textContent = a;
+    }
 }
