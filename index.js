@@ -9,3 +9,12 @@ const action = ['-', '+', 'X', '/'];
 // display
 const out = document.querySelector('.calc-screen p');
 
+function clearAll() {
+    a = '';
+    b = '';
+    sign = '';
+    finish = false;
+    out.textContent = 0;
+}
+
+document.querySelector('.ac').onclick = clearAll()
