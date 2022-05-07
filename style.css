@@ -6,6 +6,11 @@
     white #fdfdfd
 */
 
+body {
+    color: #2c3e50;
+    background: #2c3e50
+}
+
 .calc {
     margin: 50px auto;
     width: 300px;
